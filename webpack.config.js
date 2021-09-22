@@ -7,20 +7,29 @@ module.exports = {
   mode: 'development',
   module: {
     rules: [
-      {
-        // Compile source code with ts
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
+      // {
+      //   // Compile source code with ts
+      //   test: /\.tsx?$/,
+      //   use: 'ts-loader',
+      //   exclude: /node_modules/,
+      // },
+      // {
+      //   test: /\.tsx?$/,
+      //   use: 'babel-loader',
+      //   exclude: /node_modules/,
+      // },
       {
         // jest requires fallback to babel
-        test: /\.test\.tsx?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react'],
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-typescript',
+              '@babel/preset-react',
+            ],
           },
         },
       },
