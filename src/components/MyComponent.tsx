@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface Props {
-  text: string;
+  text?: string;
 }
 
 const MyComponent = ({ text }: Props) => {

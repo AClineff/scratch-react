@@ -7,17 +7,6 @@ module.exports = {
   mode: 'development',
   module: {
     rules: [
-      // {
-      //   // Compile source code with ts
-      //   test: /\.tsx?$/,
-      //   use: 'ts-loader',
-      //   exclude: /node_modules/,
-      // },
-      // {
-      //   test: /\.tsx?$/,
-      //   use: 'babel-loader',
-      //   exclude: /node_modules/,
-      // },
       {
         // jest requires fallback to babel
         test: /\.tsx?$/,
