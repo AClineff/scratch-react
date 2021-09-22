@@ -8,7 +8,7 @@ module.exports = {
   module: {
     rules: [
       {
-        // jest requires fallback to babel
+        // Compile all typescript
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
@@ -22,10 +22,16 @@ module.exports = {
           },
         },
       },
+      {
+        // Process tailwind with PostCSS
+        test: /\.css$/i,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.css'],
   },
   plugins: [
     new HtmlWebpackPlugin({
