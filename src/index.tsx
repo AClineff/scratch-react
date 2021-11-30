@@ -4,11 +4,7 @@ import MyComponent from './components/MyComponent';
 import './styles.css';
 
 export const App = () => {
-  return (
-    <div data-testid="application-root">
-      <MyComponent text="Hello World!" />
-    </div>
-  );
+  return <MyComponent text="Hello World!" />;
 };
 
 ReactDOM.render(<App />, document.getElementById('app'));
